@@ -1,0 +1,39 @@
+{
+    "id": "eff37744-3581-43ff-a0b8-4c01a416f1a6",
+    "started_at": "2026-10-30T15:12:31.739968",
+    "updated_at": "2026-10-30T15:14:07.500243",
+    "finished_at": "2026-10-30T15:14:07.500243",
+    "n_total_trials": 1,
+    "stats": {
+        "n_completed_trials": 1,
+        "n_errored_trials": 0,
+        "n_running_trials": 0,
+        "n_pending_trials": 0,
+        "n_cancelled_trials": 0,
+        "n_retries": 0,
+        "evals": {
+            "oracle__wallet-ledger": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "pass_at_k": {},
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "wallet-ledger-concurrency__RoMCxbo"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        },
+        "n_input_tokens": null,
+        "n_cache_tokens": null,
+        "n_output_tokens": null,
+        "cost_usd": null
+    }
+}

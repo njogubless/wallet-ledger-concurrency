@@ -1,0 +1,5 @@
+Agent 'oracle' does not declare an options_model; leftover kwargs are ignored
+Skipping image OS validation for hb__1d84d42814d1eb31fa1d8d7a9a927dbe: docker inspect returned 1
+Agent 'oracle' exposes no native web search or fetch tools for Harbor to disable; continuing. Sandbox network policy still applies.
+Collecting main service artifacts
+Skipping image OS validation for hb__1d84d42814d1eb31fa1d8d7a9a927dbe: docker inspect returned 1

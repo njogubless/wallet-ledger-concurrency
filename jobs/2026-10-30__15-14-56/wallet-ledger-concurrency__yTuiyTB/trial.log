@@ -1,0 +1,235 @@
+Skipping image OS validation for hb__1d84d42814d1eb31fa1d8d7a9a927dbe: docker inspect returned 1
+Trial wallet-ledger-concurrency__yTuiyTB failed: Docker compose command failed for environment wallet-ledger-concurrency. Command: docker compose --project-name wallet-ledger-concurrency__ytuiytb__env --project-directory /mnt/devspace/GO/go_projects/wallet-ledger/wallet-ledger-concurrency/environment -f /tmp/tmpeexkomwy/wallet-ledger-concurrency__yTuiyTB__env-docker-compose-resources.json -f /home/bless/.venvs/harbor/lib/python3.12/site-packages/harbor/environments/docker/docker-compose-build.yaml -f /tmp/tmpyx2xg4fw/docker-compose-environment.json -f /tmp/tmpidydnbfi/docker-compose-mounts.json -f /home/bless/.venvs/harbor/lib/python3.12/site-packages/harbor/environments/docker/docker-compose-egress-control.yaml -f /tmp/tmpwppgpzl8/docker-compose-egress-control-services.json up --detach --wait. Return code: 1. Stdout: #1 [internal] load local bake definitions
+#1 reading from stdin 669B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 210B done
+#2 DONE 0.1s
+
+#3 [internal] load metadata for docker.io/library/golang:1.23-bookworm
+#3 DONE 0.7s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.3s
+
+#5 [1/4] FROM docker.io/library/golang:1.23-bookworm@sha256:167053a2bb901972bf2c1611f8f52c44d5fe7e762e5cab213708d82c421614db
+#5 DONE 0.0s
+
+#6 [internal] load build context
+#6 transferring context: 140B done
+#6 DONE 0.2s
+
+#7 [2/4] WORKDIR /app
+#7 CACHED
+
+#8 [3/4] COPY starter/ /app/
+#8 CACHED
+
+#9 [4/4] RUN go build ./... 2>&1 | tee /tmp/build.log || true
+#9 CACHED
+
+#10 exporting to image
+#10 exporting layers done
+#10 writing image sha256:320fd5eac3bf74c86c2a3b04bfd974bb9afb64d774d55315494282a15b9f19b0 0.1s done
+#10 naming to docker.io/library/wallet-ledger-concurrency__ytuiytb__env-main
+#10 naming to docker.io/library/wallet-ledger-concurrency__ytuiytb__env-main 0.1s done
+#10 DONE 0.2s
+
+#11 resolving provenance for metadata file
+#11 DONE 0.0s
+ wallet-ledger-concurrency__ytuiytb__env-main  Built
+ Network wallet-ledger-concurrency__ytuiytb__env_default  Creating
+ Network wallet-ledger-concurrency__ytuiytb__env_default  Created
+ Container wallet-ledger-concurrency__ytuiytb__env-harbor-docker-egress-control-sidecar-1  Creating
+ Container wallet-ledger-concurrency__ytuiytb__env-harbor-docker-egress-control-sidecar-1  Created
+ Container wallet-ledger-concurrency__ytuiytb__env-main-1  Creating
+ Container wallet-ledger-concurrency__ytuiytb__env-main-1  Created
+ Container wallet-ledger-concurrency__ytuiytb__env-harbor-docker-egress-control-sidecar-1  Starting
+ Container wallet-ledger-concurrency__ytuiytb__env-harbor-docker-egress-control-sidecar-1  Started
+ Container wallet-ledger-concurrency__ytuiytb__env-harbor-docker-egress-control-sidecar-1  Waiting
+ Container wallet-ledger-concurrency__ytuiytb__env-harbor-docker-egress-control-sidecar-1  Error
+dependency failed to start: container wallet-ledger-concurrency__ytuiytb__env-harbor-docker-egress-control-sidecar-1 exited (137)
+. Stderr: None. 
+compose cp failed; retrying download with engine cp: Docker compose command failed for environment wallet-ledger-concurrency. Command: docker compose --project-name wallet-ledger-concurrency__ytuiytb__env --project-directory /mnt/devspace/GO/go_projects/wallet-ledger/wallet-ledger-concurrency/environment -f /tmp/tmpeexkomwy/wallet-ledger-concurrency__yTuiyTB__env-docker-compose-resources.json -f /home/bless/.venvs/harbor/lib/python3.12/site-packages/harbor/environments/docker/docker-compose-build.yaml -f /tmp/tmpyx2xg4fw/docker-compose-environment.json -f /tmp/tmpidydnbfi/docker-compose-mounts.json -f /home/bless/.venvs/harbor/lib/python3.12/site-packages/harbor/environments/docker/docker-compose-egress-control.yaml -f /tmp/tmpwppgpzl8/docker-compose-egress-control-services.json cp main:/logs/agent/. /mnt/devspace/GO/go_projects/wallet-ledger/jobs/2026-10-30__15-14-56/wallet-ledger-concurrency__yTuiyTB/agent. Return code: 1. Stdout:  wallet-ledger-concurrency__ytuiytb__env-main-1 copy wallet-ledger-concurrency__ytuiytb__env-main-1:/logs/agent/. to /mnt/devspace/GO/go_projects/wallet-ledger/jobs/2026-10-30__15-14-56/wallet-ledger-concurrency__yTuiyTB/agent Copying
+Error response from daemon: Could not find the file /logs/agent/. in container d985e824ba6e4588a2d97fbdaa43dcfc7e52d15164b9255b36481fc7c001d9b1
+. Stderr: None. 
+Failed to download logs to jobs/2026-10-30__15-14-56/wallet-ledger-concurrency__yTuiyTB/agent: Engine cp failed ('d985e824ba6e:/logs/agent/.' -> 'jobs/2026-10-30__15-14-56/wallet-ledger-concurrency__yTuiyTB/agent'): Error response from daemon: Could not find the file /logs/agent/. in container d985e824ba6e
+Traceback (most recent call last):
+  File "/home/bless/.venvs/harbor/lib/python3.12/site-packages/harbor/trial/trial.py", line 606, in run
+    await self._prepare()
+  File "/home/bless/.venvs/harbor/lib/python3.12/site-packages/harbor/trial/trial.py", line 645, in _prepare
+    await self._setup_agent_environment()
+  File "/home/bless/.venvs/harbor/lib/python3.12/site-packages/harbor/trial/trial.py", line 1849, in _setup_agent_environment
+    await self._start_agent_environment()
+  File "/home/bless/.venvs/harbor/lib/python3.12/site-packages/harbor/trial/trial.py", line 1855, in _start_agent_environment
+    await asyncio.wait_for(
+  File "/usr/lib/python3.12/asyncio/tasks.py", line 520, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/home/bless/.venvs/harbor/lib/python3.12/site-packages/harbor/environments/docker/docker.py", line 1091, in start
+    await self._run_docker_compose_command(["up", *runtime.up_args])
+  File "/home/bless/.venvs/harbor/lib/python3.12/site-packages/harbor/environments/docker/docker.py", line 765, in _run_docker_compose_command
+    raise RuntimeError(
+RuntimeError: Docker compose command failed for environment wallet-ledger-concurrency. Command: docker compose --project-name wallet-ledger-concurrency__ytuiytb__env --project-directory /mnt/devspace/GO/go_projects/wallet-ledger/wallet-ledger-concurrency/environment -f /tmp/tmpeexkomwy/wallet-ledger-concurrency__yTuiyTB__env-docker-compose-resources.json -f /home/bless/.venvs/harbor/lib/python3.12/site-packages/harbor/environments/docker/docker-compose-build.yaml -f /tmp/tmpyx2xg4fw/docker-compose-environment.json -f /tmp/tmpidydnbfi/docker-compose-mounts.json -f /home/bless/.venvs/harbor/lib/python3.12/site-packages/harbor/environments/docker/docker-compose-egress-control.yaml -f /tmp/tmpwppgpzl8/docker-compose-egress-control-services.json up --detach --wait. Return code: 1. Stdout: #1 [internal] load local bake definitions
+#1 reading from stdin 669B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 210B done
+#2 DONE 0.1s
+
+#3 [internal] load metadata for docker.io/library/golang:1.23-bookworm
+#3 DONE 0.7s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.3s
+
+#5 [1/4] FROM docker.io/library/golang:1.23-bookworm@sha256:167053a2bb901972bf2c1611f8f52c44d5fe7e762e5cab213708d82c421614db
+#5 DONE 0.0s
+
+#6 [internal] load build context
+#6 transferring context: 140B done
+#6 DONE 0.2s
+
+#7 [2/4] WORKDIR /app
+#7 CACHED
+
+#8 [3/4] COPY starter/ /app/
+#8 CACHED
+
+#9 [4/4] RUN go build ./... 2>&1 | tee /tmp/build.log || true
+#9 CACHED
+
+#10 exporting to image
+#10 exporting layers done
+#10 writing image sha256:320fd5eac3bf74c86c2a3b04bfd974bb9afb64d774d55315494282a15b9f19b0 0.1s done
+#10 naming to docker.io/library/wallet-ledger-concurrency__ytuiytb__env-main
+#10 naming to docker.io/library/wallet-ledger-concurrency__ytuiytb__env-main 0.1s done
+#10 DONE 0.2s
+
+#11 resolving provenance for metadata file
+#11 DONE 0.0s
+ wallet-ledger-concurrency__ytuiytb__env-main  Built
+ Network wallet-ledger-concurrency__ytuiytb__env_default  Creating
+ Network wallet-ledger-concurrency__ytuiytb__env_default  Created
+ Container wallet-ledger-concurrency__ytuiytb__env-harbor-docker-egress-control-sidecar-1  Creating
+ Container wallet-ledger-concurrency__ytuiytb__env-harbor-docker-egress-control-sidecar-1  Created
+ Container wallet-ledger-concurrency__ytuiytb__env-main-1  Creating
+ Container wallet-ledger-concurrency__ytuiytb__env-main-1  Created
+ Container wallet-ledger-concurrency__ytuiytb__env-harbor-docker-egress-control-sidecar-1  Starting
+ Container wallet-ledger-concurrency__ytuiytb__env-harbor-docker-egress-control-sidecar-1  Started
+ Container wallet-ledger-concurrency__ytuiytb__env-harbor-docker-egress-control-sidecar-1  Waiting
+ Container wallet-ledger-concurrency__ytuiytb__env-harbor-docker-egress-control-sidecar-1  Error
+dependency failed to start: container wallet-ledger-concurrency__ytuiytb__env-harbor-docker-egress-control-sidecar-1 exited (137)
+. Stderr: None. 
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bless/.venvs/harbor/lib/python3.12/site-packages/harbor/trial/trial.py", line 824, in _download_role_logs
+    await self.agent_environment.download_dir(
+  File "/home/bless/.venvs/harbor/lib/python3.12/site-packages/harbor/environments/docker/docker.py", line 1308, in download_dir
+    await self._platform.download_dir(source_dir, target_dir)
+  File "/home/bless/.venvs/harbor/lib/python3.12/site-packages/harbor/environments/docker/docker_unix.py", line 304, in download_dir
+    await self._download_via_engine_cp(f"{source_dir}/.", target_dir, service)
+  File "/home/bless/.venvs/harbor/lib/python3.12/site-packages/harbor/environments/docker/docker_unix.py", line 253, in _download_via_engine_cp
+    await self._engine_cp(f"{container}:{container_path}", str(target_path))
+  File "/home/bless/.venvs/harbor/lib/python3.12/site-packages/harbor/environments/docker/docker_unix.py", line 244, in _engine_cp
+    raise RuntimeError(
+RuntimeError: Engine cp failed ('d985e824ba6e:/logs/agent/.' -> 'jobs/2026-10-30__15-14-56/wallet-ledger-concurrency__yTuiyTB/agent'): Error response from daemon: Could not find the file /logs/agent/. in container d985e824ba6e
+
+Collecting main service artifacts
+compose cp failed; retrying download with engine cp: Docker compose command failed for environment wallet-ledger-concurrency. Command: docker compose --project-name wallet-ledger-concurrency__ytuiytb__env --project-directory /mnt/devspace/GO/go_projects/wallet-ledger/wallet-ledger-concurrency/environment -f /tmp/tmpeexkomwy/wallet-ledger-concurrency__yTuiyTB__env-docker-compose-resources.json -f /home/bless/.venvs/harbor/lib/python3.12/site-packages/harbor/environments/docker/docker-compose-build.yaml -f /tmp/tmpyx2xg4fw/docker-compose-environment.json -f /tmp/tmpidydnbfi/docker-compose-mounts.json -f /home/bless/.venvs/harbor/lib/python3.12/site-packages/harbor/environments/docker/docker-compose-egress-control.yaml -f /tmp/tmpwppgpzl8/docker-compose-egress-control-services.json cp main:/logs/artifacts /mnt/devspace/GO/go_projects/wallet-ledger/jobs/2026-10-30__15-14-56/wallet-ledger-concurrency__yTuiyTB/artifacts/logs/artifacts. Return code: 1. Stdout:  wallet-ledger-concurrency__ytuiytb__env-main-1 copy wallet-ledger-concurrency__ytuiytb__env-main-1:/logs/artifacts to /mnt/devspace/GO/go_projects/wallet-ledger/jobs/2026-10-30__15-14-56/wallet-ledger-concurrency__yTuiyTB/artifacts/logs/artifacts Copying
+Error response from daemon: Could not find the file /logs/artifacts in container d985e824ba6e4588a2d97fbdaa43dcfc7e52d15164b9255b36481fc7c001d9b1
+. Stderr: None. 
+Failed to download artifact '/logs/artifacts' from service 'main' (best-effort)
+Traceback (most recent call last):
+  File "/home/bless/.venvs/harbor/lib/python3.12/site-packages/harbor/trial/trial.py", line 606, in run
+    await self._prepare()
+  File "/home/bless/.venvs/harbor/lib/python3.12/site-packages/harbor/trial/trial.py", line 645, in _prepare
+    await self._setup_agent_environment()
+  File "/home/bless/.venvs/harbor/lib/python3.12/site-packages/harbor/trial/trial.py", line 1849, in _setup_agent_environment
+    await self._start_agent_environment()
+  File "/home/bless/.venvs/harbor/lib/python3.12/site-packages/harbor/trial/trial.py", line 1855, in _start_agent_environment
+    await asyncio.wait_for(
+  File "/usr/lib/python3.12/asyncio/tasks.py", line 520, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/home/bless/.venvs/harbor/lib/python3.12/site-packages/harbor/environments/docker/docker.py", line 1091, in start
+    await self._run_docker_compose_command(["up", *runtime.up_args])
+  File "/home/bless/.venvs/harbor/lib/python3.12/site-packages/harbor/environments/docker/docker.py", line 765, in _run_docker_compose_command
+    raise RuntimeError(
+RuntimeError: Docker compose command failed for environment wallet-ledger-concurrency. Command: docker compose --project-name wallet-ledger-concurrency__ytuiytb__env --project-directory /mnt/devspace/GO/go_projects/wallet-ledger/wallet-ledger-concurrency/environment -f /tmp/tmpeexkomwy/wallet-ledger-concurrency__yTuiyTB__env-docker-compose-resources.json -f /home/bless/.venvs/harbor/lib/python3.12/site-packages/harbor/environments/docker/docker-compose-build.yaml -f /tmp/tmpyx2xg4fw/docker-compose-environment.json -f /tmp/tmpidydnbfi/docker-compose-mounts.json -f /home/bless/.venvs/harbor/lib/python3.12/site-packages/harbor/environments/docker/docker-compose-egress-control.yaml -f /tmp/tmpwppgpzl8/docker-compose-egress-control-services.json up --detach --wait. Return code: 1. Stdout: #1 [internal] load local bake definitions
+#1 reading from stdin 669B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 210B done
+#2 DONE 0.1s
+
+#3 [internal] load metadata for docker.io/library/golang:1.23-bookworm
+#3 DONE 0.7s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.3s
+
+#5 [1/4] FROM docker.io/library/golang:1.23-bookworm@sha256:167053a2bb901972bf2c1611f8f52c44d5fe7e762e5cab213708d82c421614db
+#5 DONE 0.0s
+
+#6 [internal] load build context
+#6 transferring context: 140B done
+#6 DONE 0.2s
+
+#7 [2/4] WORKDIR /app
+#7 CACHED
+
+#8 [3/4] COPY starter/ /app/
+#8 CACHED
+
+#9 [4/4] RUN go build ./... 2>&1 | tee /tmp/build.log || true
+#9 CACHED
+
+#10 exporting to image
+#10 exporting layers done
+#10 writing image sha256:320fd5eac3bf74c86c2a3b04bfd974bb9afb64d774d55315494282a15b9f19b0 0.1s done
+#10 naming to docker.io/library/wallet-ledger-concurrency__ytuiytb__env-main
+#10 naming to docker.io/library/wallet-ledger-concurrency__ytuiytb__env-main 0.1s done
+#10 DONE 0.2s
+
+#11 resolving provenance for metadata file
+#11 DONE 0.0s
+ wallet-ledger-concurrency__ytuiytb__env-main  Built
+ Network wallet-ledger-concurrency__ytuiytb__env_default  Creating
+ Network wallet-ledger-concurrency__ytuiytb__env_default  Created
+ Container wallet-ledger-concurrency__ytuiytb__env-harbor-docker-egress-control-sidecar-1  Creating
+ Container wallet-ledger-concurrency__ytuiytb__env-harbor-docker-egress-control-sidecar-1  Created
+ Container wallet-ledger-concurrency__ytuiytb__env-main-1  Creating
+ Container wallet-ledger-concurrency__ytuiytb__env-main-1  Created
+ Container wallet-ledger-concurrency__ytuiytb__env-harbor-docker-egress-control-sidecar-1  Starting
+ Container wallet-ledger-concurrency__ytuiytb__env-harbor-docker-egress-control-sidecar-1  Started
+ Container wallet-ledger-concurrency__ytuiytb__env-harbor-docker-egress-control-sidecar-1  Waiting
+ Container wallet-ledger-concurrency__ytuiytb__env-harbor-docker-egress-control-sidecar-1  Error
+dependency failed to start: container wallet-ledger-concurrency__ytuiytb__env-harbor-docker-egress-control-sidecar-1 exited (137)
+. Stderr: None. 
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bless/.venvs/harbor/lib/python3.12/site-packages/harbor/trial/artifact_handler.py", line 351, in _download_artifact
+    await source_env.service_download_file(
+  File "/home/bless/.venvs/harbor/lib/python3.12/site-packages/harbor/environments/docker/docker.py", line 1319, in service_download_file
+    await self.download_file(source_path, target_path)
+  File "/home/bless/.venvs/harbor/lib/python3.12/site-packages/harbor/environments/docker/docker.py", line 1304, in download_file
+    await self._platform.download_file(source_path, target_path)
+  File "/home/bless/.venvs/harbor/lib/python3.12/site-packages/harbor/environments/docker/docker_unix.py", line 278, in download_file
+    await self._download_via_engine_cp(source_path, target_path, service)
+  File "/home/bless/.venvs/harbor/lib/python3.12/site-packages/harbor/environments/docker/docker_unix.py", line 253, in _download_via_engine_cp
+    await self._engine_cp(f"{container}:{container_path}", str(target_path))
+  File "/home/bless/.venvs/harbor/lib/python3.12/site-packages/harbor/environments/docker/docker_unix.py", line 244, in _engine_cp
+    raise RuntimeError(
+RuntimeError: Engine cp failed ('d985e824ba6e:/logs/artifacts' -> 'jobs/2026-10-30__15-14-56/wallet-ledger-concurrency__yTuiyTB/artifacts/logs/artifacts'): Error response from daemon: Could not find the file /logs/artifacts in container d985e824ba6e
+

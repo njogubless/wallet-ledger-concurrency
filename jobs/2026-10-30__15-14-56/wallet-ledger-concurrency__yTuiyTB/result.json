@@ -1,0 +1,104 @@
+{
+    "id": "07540715-4065-4e1b-b1a5-744fcffd844c",
+    "task_name": "njogubless/wallet-ledger-concurrency",
+    "trial_name": "wallet-ledger-concurrency__yTuiyTB",
+    "trial_uri": "file:///mnt/devspace/GO/go_projects/wallet-ledger/jobs/2026-10-30__15-14-56/wallet-ledger-concurrency__yTuiyTB",
+    "task_id": {
+        "path": "wallet-ledger-concurrency"
+    },
+    "source": "wallet-ledger",
+    "task_checksum": "8bcb5c16249ddc162b17ff9c4e8df91a894f38f060fc70d880820890f7532b56",
+    "config": {
+        "task": {
+            "path": "wallet-ledger-concurrency",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "wallet-ledger"
+        },
+        "trial_name": "wallet-ledger-concurrency__yTuiyTB",
+        "trials_dir": "jobs/2026-10-30__15-14-56",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": "nop",
+            "import_path": null,
+            "model_name": null,
+            "base_url": null,
+            "model_api_key_name": null,
+            "model_api_format": null,
+            "skip_model_parsing": false,
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {},
+            "mcp_servers": []
+        },
+        "user_agent": null,
+        "environment": {
+            "type": "docker",
+            "import_path": null,
+            "force_build": false,
+            "delete": true,
+            "stream": false,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "kwargs": {},
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "extra_instructions": [],
+        "job_id": "02e7c372-43aa-4217-9822-5c94e84ab557",
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "nop",
+        "version": "1.0.0",
+        "model_info": null
+    },
+    "agent_result": null,
+    "verifier_result": null,
+    "verifier_environment_mode": "separate",
+    "exception_info": {
+        "exception_type": "RuntimeError",
+        "exception_message": "Docker compose command failed for environment wallet-ledger-concurrency. Command: docker compose --project-name wallet-ledger-concurrency__ytuiytb__env --project-directory /mnt/devspace/GO/go_projects/wallet-ledger/wallet-ledger-concurrency/environment -f /tmp/tmpeexkomwy/wallet-ledger-concurrency__yTuiyTB__env-docker-compose-resources.json -f /home/bless/.venvs/harbor/lib/python3.12/site-packages/harbor/environments/docker/docker-compose-build.yaml -f /tmp/tmpyx2xg4fw/docker-compose-environment.json -f /tmp/tmpidydnbfi/docker-compose-mounts.json -f /home/bless/.venvs/harbor/lib/python3.12/site-packages/harbor/environments/docker/docker-compose-egress-control.yaml -f /tmp/tmpwppgpzl8/docker-compose-egress-control-services.json up --detach --wait. Return code: 1. Stdout: #1 [internal] load local bake definitions\n#1 reading from stdin 669B done\n#1 DONE 0.0s\n\n#2 [internal] load build definition from Dockerfile\n#2 transferring dockerfile: 210B done\n#2 DONE 0.1s\n\n#3 [internal] load metadata for docker.io/library/golang:1.23-bookworm\n#3 DONE 0.7s\n\n#4 [internal] load .dockerignore\n#4 transferring context: 2B done\n#4 DONE 0.3s\n\n#5 [1/4] FROM docker.io/library/golang:1.23-bookworm@sha256:167053a2bb901972bf2c1611f8f52c44d5fe7e762e5cab213708d82c421614db\n#5 DONE 0.0s\n\n#6 [internal] load build context\n#6 transferring context: 140B done\n#6 DONE 0.2s\n\n#7 [2/4] WORKDIR /app\n#7 CACHED\n\n#8 [3/4] COPY starter/ /app/\n#8 CACHED\n\n#9 [4/4] RUN go build ./... 2>&1 | tee /tmp/build.log || true\n#9 CACHED\n\n#10 exporting to image\n#10 exporting layers done\n#10 writing image sha256:320fd5eac3bf74c86c2a3b04bfd974bb9afb64d774d55315494282a15b9f19b0 0.1s done\n#10 naming to docker.io/library/wallet-ledger-concurrency__ytuiytb__env-main\n#10 naming to docker.io/library/wallet-ledger-concurrency__ytuiytb__env-main 0.1s done\n#10 DONE 0.2s\n\n#11 resolving provenance for metadata file\n#11 DONE 0.0s\n wallet-ledger-concurrency__ytuiytb__env-main  Built\n Network wallet-ledger-concurrency__ytuiytb__env_default  Creating\n Network wallet-ledger-concurrency__ytuiytb__env_default  Created\n Container wallet-ledger-concurrency__ytuiytb__env-harbor-docker-egress-control-sidecar-1  Creating\n Container wallet-ledger-concurrency__ytuiytb__env-harbor-docker-egress-control-sidecar-1  Created\n Container wallet-ledger-concurrency__ytuiytb__env-main-1  Creating\n Container wallet-ledger-concurrency__ytuiytb__env-main-1  Created\n Container wallet-ledger-concurrency__ytuiytb__env-harbor-docker-egress-control-sidecar-1  Starting\n Container wallet-ledger-concurrency__ytuiytb__env-harbor-docker-egress-control-sidecar-1  Started\n Container wallet-ledger-concurrency__ytuiytb__env-harbor-docker-egress-control-sidecar-1  Waiting\n Container wallet-ledger-concurrency__ytuiytb__env-harbor-docker-egress-control-sidecar-1  Error\ndependency failed to start: container wallet-ledger-concurrency__ytuiytb__env-harbor-docker-egress-control-sidecar-1 exited (137)\n. Stderr: None. ",
+        "exception_traceback": "Traceback (most recent call last):\n  File \"/home/bless/.venvs/harbor/lib/python3.12/site-packages/harbor/trial/trial.py\", line 606, in run\n    await self._prepare()\n  File \"/home/bless/.venvs/harbor/lib/python3.12/site-packages/harbor/trial/trial.py\", line 645, in _prepare\n    await self._setup_agent_environment()\n  File \"/home/bless/.venvs/harbor/lib/python3.12/site-packages/harbor/trial/trial.py\", line 1849, in _setup_agent_environment\n    await self._start_agent_environment()\n  File \"/home/bless/.venvs/harbor/lib/python3.12/site-packages/harbor/trial/trial.py\", line 1855, in _start_agent_environment\n    await asyncio.wait_for(\n  File \"/usr/lib/python3.12/asyncio/tasks.py\", line 520, in wait_for\n    return await fut\n           ^^^^^^^^^\n  File \"/home/bless/.venvs/harbor/lib/python3.12/site-packages/harbor/environments/docker/docker.py\", line 1091, in start\n    await self._run_docker_compose_command([\"up\", *runtime.up_args])\n  File \"/home/bless/.venvs/harbor/lib/python3.12/site-packages/harbor/environments/docker/docker.py\", line 765, in _run_docker_compose_command\n    raise RuntimeError(\nRuntimeError: Docker compose command failed for environment wallet-ledger-concurrency. Command: docker compose --project-name wallet-ledger-concurrency__ytuiytb__env --project-directory /mnt/devspace/GO/go_projects/wallet-ledger/wallet-ledger-concurrency/environment -f /tmp/tmpeexkomwy/wallet-ledger-concurrency__yTuiyTB__env-docker-compose-resources.json -f /home/bless/.venvs/harbor/lib/python3.12/site-packages/harbor/environments/docker/docker-compose-build.yaml -f /tmp/tmpyx2xg4fw/docker-compose-environment.json -f /tmp/tmpidydnbfi/docker-compose-mounts.json -f /home/bless/.venvs/harbor/lib/python3.12/site-packages/harbor/environments/docker/docker-compose-egress-control.yaml -f /tmp/tmpwppgpzl8/docker-compose-egress-control-services.json up --detach --wait. Return code: 1. Stdout: #1 [internal] load local bake definitions\n#1 reading from stdin 669B done\n#1 DONE 0.0s\n\n#2 [internal] load build definition from Dockerfile\n#2 transferring dockerfile: 210B done\n#2 DONE 0.1s\n\n#3 [internal] load metadata for docker.io/library/golang:1.23-bookworm\n#3 DONE 0.7s\n\n#4 [internal] load .dockerignore\n#4 transferring context: 2B done\n#4 DONE 0.3s\n\n#5 [1/4] FROM docker.io/library/golang:1.23-bookworm@sha256:167053a2bb901972bf2c1611f8f52c44d5fe7e762e5cab213708d82c421614db\n#5 DONE 0.0s\n\n#6 [internal] load build context\n#6 transferring context: 140B done\n#6 DONE 0.2s\n\n#7 [2/4] WORKDIR /app\n#7 CACHED\n\n#8 [3/4] COPY starter/ /app/\n#8 CACHED\n\n#9 [4/4] RUN go build ./... 2>&1 | tee /tmp/build.log || true\n#9 CACHED\n\n#10 exporting to image\n#10 exporting layers done\n#10 writing image sha256:320fd5eac3bf74c86c2a3b04bfd974bb9afb64d774d55315494282a15b9f19b0 0.1s done\n#10 naming to docker.io/library/wallet-ledger-concurrency__ytuiytb__env-main\n#10 naming to docker.io/library/wallet-ledger-concurrency__ytuiytb__env-main 0.1s done\n#10 DONE 0.2s\n\n#11 resolving provenance for metadata file\n#11 DONE 0.0s\n wallet-ledger-concurrency__ytuiytb__env-main  Built\n Network wallet-ledger-concurrency__ytuiytb__env_default  Creating\n Network wallet-ledger-concurrency__ytuiytb__env_default  Created\n Container wallet-ledger-concurrency__ytuiytb__env-harbor-docker-egress-control-sidecar-1  Creating\n Container wallet-ledger-concurrency__ytuiytb__env-harbor-docker-egress-control-sidecar-1  Created\n Container wallet-ledger-concurrency__ytuiytb__env-main-1  Creating\n Container wallet-ledger-concurrency__ytuiytb__env-main-1  Created\n Container wallet-ledger-concurrency__ytuiytb__env-harbor-docker-egress-control-sidecar-1  Starting\n Container wallet-ledger-concurrency__ytuiytb__env-harbor-docker-egress-control-sidecar-1  Started\n Container wallet-ledger-concurrency__ytuiytb__env-harbor-docker-egress-control-sidecar-1  Waiting\n Container wallet-ledger-concurrency__ytuiytb__env-harbor-docker-egress-control-sidecar-1  Error\ndependency failed to start: container wallet-ledger-concurrency__ytuiytb__env-harbor-docker-egress-control-sidecar-1 exited (137)\n. Stderr: None. \n",
+        "occurred_at": "2026-10-30T12:15:43.382565Z"
+    },
+    "started_at": "2026-10-30T12:15:01.257698Z",
+    "finished_at": "2026-10-30T12:15:47.490501Z",
+    "environment_setup": {
+        "started_at": "2026-10-30T12:15:01.340790Z",
+        "finished_at": "2026-10-30T12:15:43.128797Z"
+    },
+    "agent_setup": null,
+    "agent_execution": null,
+    "verifier": null,
+    "step_results": null
+}

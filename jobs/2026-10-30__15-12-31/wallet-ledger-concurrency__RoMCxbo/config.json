@@ -1,0 +1,9 @@
+{
+    "task": {
+        "path": "wallet-ledger-concurrency",
+        "source": "wallet-ledger"
+    },
+    "trial_name": "wallet-ledger-concurrency__RoMCxbo",
+    "trials_dir": "jobs/2026-10-30__15-12-31",
+    "job_id": "eff37744-3581-43ff-a0b8-4c01a416f1a6"
+}

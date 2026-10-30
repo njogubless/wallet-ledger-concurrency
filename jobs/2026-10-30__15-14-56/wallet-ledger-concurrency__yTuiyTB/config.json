@@ -1,0 +1,12 @@
+{
+    "task": {
+        "path": "wallet-ledger-concurrency",
+        "source": "wallet-ledger"
+    },
+    "trial_name": "wallet-ledger-concurrency__yTuiyTB",
+    "trials_dir": "jobs/2026-10-30__15-14-56",
+    "agent": {
+        "name": "nop"
+    },
+    "job_id": "02e7c372-43aa-4217-9822-5c94e84ab557"
+}
