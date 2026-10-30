@@ -1,0 +1,120 @@
+{
+    "id": "bb27b55d-5a34-43ee-abb4-3773f372ff16",
+    "task_name": "njogubless/wallet-ledger-concurrency",
+    "trial_name": "wallet-ledger-concurrency__YUbsFq5",
+    "trial_uri": "file:///mnt/devspace/projects/myprojects/wallet/wallet-ledger-concurrency/jobs/2026-10-30__14-55-23/wallet-ledger-concurrency__YUbsFq5",
+    "task_id": {
+        "path": "."
+    },
+    "source": null,
+    "task_checksum": "86d90e467551baaddb9c29c2837a0bb40e7b7dfd0ece47aadc987192ef7b96da",
+    "config": {
+        "task": {
+            "path": ".",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": null
+        },
+        "trial_name": "wallet-ledger-concurrency__YUbsFq5",
+        "trials_dir": "jobs/2026-10-30__14-55-23",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": "nop",
+            "import_path": null,
+            "model_name": null,
+            "base_url": null,
+            "model_api_key_name": null,
+            "model_api_format": null,
+            "skip_model_parsing": false,
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {},
+            "mcp_servers": []
+        },
+        "user_agent": null,
+        "environment": {
+            "type": "docker",
+            "import_path": null,
+            "force_build": false,
+            "delete": true,
+            "stream": false,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "kwargs": {},
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "extra_instructions": [],
+        "job_id": "91a3cddd-502d-4d8e-9ee7-296f9c988713",
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "nop",
+        "version": "1.0.0",
+        "model_info": null
+    },
+    "agent_result": {
+        "n_input_tokens": null,
+        "n_cache_tokens": null,
+        "n_output_tokens": null,
+        "cost_usd": null,
+        "model_usage": null,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 0.0
+        }
+    },
+    "verifier_environment_mode": "separate",
+    "exception_info": null,
+    "started_at": "2026-10-30T11:55:28.033741Z",
+    "finished_at": "2026-10-30T11:57:04.078114Z",
+    "environment_setup": {
+        "started_at": "2026-10-30T11:55:28.294542Z",
+        "finished_at": "2026-10-30T11:55:43.334271Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-10-30T11:55:43.334341Z",
+        "finished_at": "2026-10-30T11:55:43.334438Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-10-30T11:55:43.334531Z",
+        "finished_at": "2026-10-30T11:55:43.336468Z"
+    },
+    "verifier": {
+        "started_at": "2026-10-30T11:55:58.052110Z",
+        "finished_at": "2026-10-30T11:57:04.078073Z"
+    },
+    "step_results": null
+}

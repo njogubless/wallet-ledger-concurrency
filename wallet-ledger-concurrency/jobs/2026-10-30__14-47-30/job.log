@@ -1,0 +1,6 @@
+Agent 'oracle' does not declare an options_model; leftover kwargs are ignored
+Building Docker image harbor-prebuilt:harbor-docker-egress-control-sidecar--c08979aaa1949ff7 from /home/bless/.venvs/harbor/lib/python3.12/site-packages/harbor/environments/docker/harbor-docker-egress-control-sidecar using /home/bless/.venvs/harbor/lib/python3.12/site-packages/harbor/environments/docker/harbor-docker-egress-control-sidecar/Dockerfile at 2026-10-30 11:47:56.233398+00:00
+Skipping image OS validation for hb__1d84d42814d1eb31fa1d8d7a9a927dbe: docker inspect returned 1
+Agent 'oracle' exposes no native web search or fetch tools for Harbor to disable; continuing. Sandbox network policy still applies.
+Collecting main service artifacts
+Skipping image OS validation for hb__1d84d42814d1eb31fa1d8d7a9a927dbe: docker inspect returned 1

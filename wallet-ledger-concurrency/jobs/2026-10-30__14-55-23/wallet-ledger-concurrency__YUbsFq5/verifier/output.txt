@@ -1,0 +1,649 @@
+==================
+WARNING: DATA RACE
+Read at 0x00c0000a6420 by goroutine 9:
+  runtime.mapaccess2_faststr()
+      /usr/local/go/src/runtime/map_faststr.go:117 +0x0
+  ledgertask/ledger.(*Ledger).Transfer()
+      /app/ledger/ledger.go:71 +0x224
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants.func1()
+      /app/ledger/ledger_concurrency_test.go:48 +0x2aa
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants.gowrap1()
+      /app/ledger/ledger_concurrency_test.go:50 +0x41
+
+Previous write at 0x00c0000a6420 by goroutine 8:
+  runtime.mapassign_faststr()
+      /usr/local/go/src/runtime/map_faststr.go:223 +0x0
+  ledgertask/ledger.(*Ledger).Transfer()
+      /app/ledger/ledger.go:83 +0x339
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants.func1()
+      /app/ledger/ledger_concurrency_test.go:48 +0x2aa
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants.gowrap1()
+      /app/ledger/ledger_concurrency_test.go:50 +0x41
+
+Goroutine 9 (running) created at:
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants()
+      /app/ledger/ledger_concurrency_test.go:41 +0x59d
+  testing.tRunner()
+      /usr/local/go/src/testing/testing.go:1690 +0x226
+  testing.(*T).Run.gowrap1()
+      /usr/local/go/src/testing/testing.go:1743 +0x44
+
+Goroutine 8 (finished) created at:
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants()
+      /app/ledger/ledger_concurrency_test.go:41 +0x59d
+  testing.tRunner()
+      /usr/local/go/src/testing/testing.go:1690 +0x226
+  testing.(*T).Run.gowrap1()
+      /usr/local/go/src/testing/testing.go:1743 +0x44
+==================
+==================
+WARNING: DATA RACE
+Read at 0x00c0000a87e0 by goroutine 9:
+  ledgertask/ledger.(*Ledger).Transfer()
+      /app/ledger/ledger.go:71 +0x235
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants.func1()
+      /app/ledger/ledger_concurrency_test.go:48 +0x2aa
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants.gowrap1()
+      /app/ledger/ledger_concurrency_test.go:50 +0x41
+
+Previous write at 0x00c0000a87e0 by goroutine 8:
+  ledgertask/ledger.(*Ledger).Transfer()
+      /app/ledger/ledger.go:84 +0x3ea
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants.func1()
+      /app/ledger/ledger_concurrency_test.go:48 +0x2aa
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants.gowrap1()
+      /app/ledger/ledger_concurrency_test.go:50 +0x41
+
+Goroutine 9 (running) created at:
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants()
+      /app/ledger/ledger_concurrency_test.go:41 +0x59d
+  testing.tRunner()
+      /usr/local/go/src/testing/testing.go:1690 +0x226
+  testing.(*T).Run.gowrap1()
+      /usr/local/go/src/testing/testing.go:1743 +0x44
+
+Goroutine 8 (finished) created at:
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants()
+      /app/ledger/ledger_concurrency_test.go:41 +0x59d
+  testing.tRunner()
+      /usr/local/go/src/testing/testing.go:1690 +0x226
+  testing.(*T).Run.gowrap1()
+      /usr/local/go/src/testing/testing.go:1743 +0x44
+==================
+==================
+WARNING: DATA RACE
+Read at 0x00c0000a87d8 by goroutine 11:
+  ledgertask/ledger.(*Ledger).Transfer()
+      /app/ledger/ledger.go:75 +0x291
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants.func1()
+      /app/ledger/ledger_concurrency_test.go:48 +0x2aa
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants.gowrap1()
+      /app/ledger/ledger_concurrency_test.go:50 +0x41
+
+Previous write at 0x00c0000a87d8 by goroutine 8:
+  ledgertask/ledger.(*Ledger).Transfer()
+      /app/ledger/ledger.go:83 +0x348
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants.func1()
+      /app/ledger/ledger_concurrency_test.go:48 +0x2aa
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants.gowrap1()
+      /app/ledger/ledger_concurrency_test.go:50 +0x41
+
+Goroutine 11 (running) created at:
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants()
+      /app/ledger/ledger_concurrency_test.go:41 +0x59d
+  testing.tRunner()
+      /usr/local/go/src/testing/testing.go:1690 +0x226
+  testing.(*T).Run.gowrap1()
+      /usr/local/go/src/testing/testing.go:1743 +0x44
+
+Goroutine 8 (finished) created at:
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants()
+      /app/ledger/ledger_concurrency_test.go:41 +0x59d
+  testing.tRunner()
+      /usr/local/go/src/testing/testing.go:1690 +0x226
+  testing.(*T).Run.gowrap1()
+      /usr/local/go/src/testing/testing.go:1743 +0x44
+==================
+==================
+WARNING: DATA RACE
+Write at 0x00c0000a6420 by goroutine 11:
+  runtime.mapassign_faststr()
+      /usr/local/go/src/runtime/map_faststr.go:223 +0x0
+  ledgertask/ledger.(*Ledger).Transfer()
+      /app/ledger/ledger.go:83 +0x339
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants.func1()
+      /app/ledger/ledger_concurrency_test.go:48 +0x2aa
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants.gowrap1()
+      /app/ledger/ledger_concurrency_test.go:50 +0x41
+
+Previous read at 0x00c0000a6420 by goroutine 9:
+  runtime.mapaccess2_faststr()
+      /usr/local/go/src/runtime/map_faststr.go:117 +0x0
+  ledgertask/ledger.(*Ledger).Transfer()
+      /app/ledger/ledger.go:75 +0x288
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants.func1()
+      /app/ledger/ledger_concurrency_test.go:48 +0x2aa
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants.gowrap1()
+      /app/ledger/ledger_concurrency_test.go:50 +0x41
+
+Goroutine 11 (running) created at:
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants()
+      /app/ledger/ledger_concurrency_test.go:41 +0x59d
+  testing.tRunner()
+      /usr/local/go/src/testing/testing.go:1690 +0x226
+  testing.(*T).Run.gowrap1()
+      /usr/local/go/src/testing/testing.go:1743 +0x44
+
+Goroutine 9 (running) created at:
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants()
+      /app/ledger/ledger_concurrency_test.go:41 +0x59d
+  testing.tRunner()
+      /usr/local/go/src/testing/testing.go:1690 +0x226
+  testing.(*T).Run.gowrap1()
+      /usr/local/go/src/testing/testing.go:1743 +0x44
+==================
+==================
+WARNING: DATA RACE
+Read at 0x00c0000a87e8 by goroutine 9:
+  ledgertask/ledger.(*Ledger).Transfer()
+      /app/ledger/ledger.go:75 +0x291
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants.func1()
+      /app/ledger/ledger_concurrency_test.go:48 +0x2aa
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants.gowrap1()
+      /app/ledger/ledger_concurrency_test.go:50 +0x41
+
+Previous write at 0x00c0000a87e8 by goroutine 8:
+  ledgertask/ledger.(*Ledger).Transfer()
+      /app/ledger/ledger.go:84 +0x3ea
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants.func1()
+      /app/ledger/ledger_concurrency_test.go:48 +0x2aa
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants.gowrap1()
+      /app/ledger/ledger_concurrency_test.go:50 +0x41
+
+Goroutine 9 (running) created at:
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants()
+      /app/ledger/ledger_concurrency_test.go:41 +0x59d
+  testing.tRunner()
+      /usr/local/go/src/testing/testing.go:1690 +0x226
+  testing.(*T).Run.gowrap1()
+      /usr/local/go/src/testing/testing.go:1743 +0x44
+
+Goroutine 8 (finished) created at:
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants()
+      /app/ledger/ledger_concurrency_test.go:41 +0x59d
+  testing.tRunner()
+      /usr/local/go/src/testing/testing.go:1690 +0x226
+  testing.(*T).Run.gowrap1()
+      /usr/local/go/src/testing/testing.go:1743 +0x44
+==================
+==================
+WARNING: DATA RACE
+Read at 0x00c0000a6420 by goroutine 9:
+  runtime.mapaccess1_faststr()
+      /usr/local/go/src/runtime/map_faststr.go:13 +0x0
+  ledgertask/ledger.(*Ledger).Transfer()
+      /app/ledger/ledger.go:83 +0x2eb
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants.func1()
+      /app/ledger/ledger_concurrency_test.go:48 +0x2aa
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants.gowrap1()
+      /app/ledger/ledger_concurrency_test.go:50 +0x41
+
+Previous write at 0x00c0000a6420 by goroutine 11:
+  runtime.mapassign_faststr()
+      /usr/local/go/src/runtime/map_faststr.go:223 +0x0
+  ledgertask/ledger.(*Ledger).Transfer()
+      /app/ledger/ledger.go:83 +0x339
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants.func1()
+      /app/ledger/ledger_concurrency_test.go:48 +0x2aa
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants.gowrap1()
+      /app/ledger/ledger_concurrency_test.go:50 +0x41
+
+Goroutine 9 (running) created at:
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants()
+      /app/ledger/ledger_concurrency_test.go:41 +0x59d
+  testing.tRunner()
+      /usr/local/go/src/testing/testing.go:1690 +0x226
+  testing.(*T).Run.gowrap1()
+      /usr/local/go/src/testing/testing.go:1743 +0x44
+
+Goroutine 11 (running) created at:
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants()
+      /app/ledger/ledger_concurrency_test.go:41 +0x59d
+  testing.tRunner()
+      /usr/local/go/src/testing/testing.go:1690 +0x226
+  testing.(*T).Run.gowrap1()
+      /usr/local/go/src/testing/testing.go:1743 +0x44
+==================
+==================
+WARNING: DATA RACE
+Read at 0x00c0000a87e0 by goroutine 9:
+  ledgertask/ledger.(*Ledger).Transfer()
+      /app/ledger/ledger.go:83 +0x2f8
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants.func1()
+      /app/ledger/ledger_concurrency_test.go:48 +0x2aa
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants.gowrap1()
+      /app/ledger/ledger_concurrency_test.go:50 +0x41
+
+Previous write at 0x00c0000a87e0 by goroutine 11:
+  ledgertask/ledger.(*Ledger).Transfer()
+      /app/ledger/ledger.go:84 +0x3ea
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants.func1()
+      /app/ledger/ledger_concurrency_test.go:48 +0x2aa
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants.gowrap1()
+      /app/ledger/ledger_concurrency_test.go:50 +0x41
+
+Goroutine 9 (running) created at:
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants()
+      /app/ledger/ledger_concurrency_test.go:41 +0x59d
+  testing.tRunner()
+      /usr/local/go/src/testing/testing.go:1690 +0x226
+  testing.(*T).Run.gowrap1()
+      /usr/local/go/src/testing/testing.go:1743 +0x44
+
+Goroutine 11 (running) created at:
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants()
+      /app/ledger/ledger_concurrency_test.go:41 +0x59d
+  testing.tRunner()
+      /usr/local/go/src/testing/testing.go:1690 +0x226
+  testing.(*T).Run.gowrap1()
+      /usr/local/go/src/testing/testing.go:1743 +0x44
+==================
+==================
+WARNING: DATA RACE
+Write at 0x00c0000a6420 by goroutine 9:
+  runtime.mapassign_faststr()
+      /usr/local/go/src/runtime/map_faststr.go:223 +0x0
+  ledgertask/ledger.(*Ledger).Transfer()
+      /app/ledger/ledger.go:83 +0x339
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants.func1()
+      /app/ledger/ledger_concurrency_test.go:48 +0x2aa
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants.gowrap1()
+      /app/ledger/ledger_concurrency_test.go:50 +0x41
+
+Previous write at 0x00c0000a6420 by goroutine 11:
+  runtime.mapassign_faststr()
+      /usr/local/go/src/runtime/map_faststr.go:223 +0x0
+  ledgertask/ledger.(*Ledger).Transfer()
+      /app/ledger/ledger.go:83 +0x339
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants.func1()
+      /app/ledger/ledger_concurrency_test.go:48 +0x2aa
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants.gowrap1()
+      /app/ledger/ledger_concurrency_test.go:50 +0x41
+
+Goroutine 9 (running) created at:
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants()
+      /app/ledger/ledger_concurrency_test.go:41 +0x59d
+  testing.tRunner()
+      /usr/local/go/src/testing/testing.go:1690 +0x226
+  testing.(*T).Run.gowrap1()
+      /usr/local/go/src/testing/testing.go:1743 +0x44
+
+Goroutine 11 (running) created at:
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants()
+      /app/ledger/ledger_concurrency_test.go:41 +0x59d
+  testing.tRunner()
+      /usr/local/go/src/testing/testing.go:1690 +0x226
+  testing.(*T).Run.gowrap1()
+      /usr/local/go/src/testing/testing.go:1743 +0x44
+==================
+==================
+WARNING: DATA RACE
+Read at 0x00c0000a87e8 by goroutine 9:
+  ledgertask/ledger.(*Ledger).Transfer()
+      /app/ledger/ledger.go:84 +0x39a
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants.func1()
+      /app/ledger/ledger_concurrency_test.go:48 +0x2aa
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants.gowrap1()
+      /app/ledger/ledger_concurrency_test.go:50 +0x41
+
+Previous write at 0x00c0000a87e8 by goroutine 11:
+  ledgertask/ledger.(*Ledger).Transfer()
+      /app/ledger/ledger.go:84 +0x3ea
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants.func1()
+      /app/ledger/ledger_concurrency_test.go:48 +0x2aa
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants.gowrap1()
+      /app/ledger/ledger_concurrency_test.go:50 +0x41
+
+Goroutine 9 (running) created at:
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants()
+      /app/ledger/ledger_concurrency_test.go:41 +0x59d
+  testing.tRunner()
+      /usr/local/go/src/testing/testing.go:1690 +0x226
+  testing.(*T).Run.gowrap1()
+      /usr/local/go/src/testing/testing.go:1743 +0x44
+
+Goroutine 11 (running) created at:
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants()
+      /app/ledger/ledger_concurrency_test.go:41 +0x59d
+  testing.tRunner()
+      /usr/local/go/src/testing/testing.go:1690 +0x226
+  testing.(*T).Run.gowrap1()
+      /usr/local/go/src/testing/testing.go:1743 +0x44
+==================
+==================
+WARNING: DATA RACE
+Read at 0x00c0000a6420 by goroutine 10:
+  runtime.mapaccess2_faststr()
+      /usr/local/go/src/runtime/map_faststr.go:117 +0x0
+  ledgertask/ledger.(*Ledger).Transfer()
+      /app/ledger/ledger.go:75 +0x288
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants.func1()
+      /app/ledger/ledger_concurrency_test.go:48 +0x2aa
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants.gowrap1()
+      /app/ledger/ledger_concurrency_test.go:50 +0x41
+
+Previous write at 0x00c0000a6420 by goroutine 9:
+  runtime.mapassign_faststr()
+      /usr/local/go/src/runtime/map_faststr.go:223 +0x0
+  ledgertask/ledger.(*Ledger).Transfer()
+      /app/ledger/ledger.go:84 +0x3db
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants.func1()
+      /app/ledger/ledger_concurrency_test.go:48 +0x2aa
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants.gowrap1()
+      /app/ledger/ledger_concurrency_test.go:50 +0x41
+
+Goroutine 10 (running) created at:
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants()
+      /app/ledger/ledger_concurrency_test.go:41 +0x59d
+  testing.tRunner()
+      /usr/local/go/src/testing/testing.go:1690 +0x226
+  testing.(*T).Run.gowrap1()
+      /usr/local/go/src/testing/testing.go:1743 +0x44
+
+Goroutine 9 (running) created at:
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants()
+      /app/ledger/ledger_concurrency_test.go:41 +0x59d
+  testing.tRunner()
+      /usr/local/go/src/testing/testing.go:1690 +0x226
+  testing.(*T).Run.gowrap1()
+      /usr/local/go/src/testing/testing.go:1743 +0x44
+==================
+==================
+WARNING: DATA RACE
+Read at 0x00c0000a6420 by goroutine 9:
+  runtime.mapaccess1_faststr()
+      /usr/local/go/src/runtime/map_faststr.go:13 +0x0
+  ledgertask/ledger.(*Ledger).Transfer()
+      /app/ledger/ledger.go:83 +0x2eb
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants.func1()
+      /app/ledger/ledger_concurrency_test.go:48 +0x2aa
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants.gowrap1()
+      /app/ledger/ledger_concurrency_test.go:50 +0x41
+
+Previous write at 0x00c0000a6420 by goroutine 10:
+  runtime.mapassign_faststr()
+      /usr/local/go/src/runtime/map_faststr.go:223 +0x0
+  ledgertask/ledger.(*Ledger).Transfer()
+      /app/ledger/ledger.go:84 +0x3db
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants.func1()
+      /app/ledger/ledger_concurrency_test.go:48 +0x2aa
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants.gowrap1()
+      /app/ledger/ledger_concurrency_test.go:50 +0x41
+
+Goroutine 9 (running) created at:
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants()
+      /app/ledger/ledger_concurrency_test.go:41 +0x59d
+  testing.tRunner()
+      /usr/local/go/src/testing/testing.go:1690 +0x226
+  testing.(*T).Run.gowrap1()
+      /usr/local/go/src/testing/testing.go:1743 +0x44
+
+Goroutine 10 (running) created at:
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants()
+      /app/ledger/ledger_concurrency_test.go:41 +0x59d
+  testing.tRunner()
+      /usr/local/go/src/testing/testing.go:1690 +0x226
+  testing.(*T).Run.gowrap1()
+      /usr/local/go/src/testing/testing.go:1743 +0x44
+==================
+==================
+WARNING: DATA RACE
+Write at 0x00c0000a6420 by goroutine 9:
+  runtime.mapassign_faststr()
+      /usr/local/go/src/runtime/map_faststr.go:223 +0x0
+  ledgertask/ledger.(*Ledger).Transfer()
+      /app/ledger/ledger.go:83 +0x339
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants.func1()
+      /app/ledger/ledger_concurrency_test.go:48 +0x2aa
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants.gowrap1()
+      /app/ledger/ledger_concurrency_test.go:50 +0x41
+
+Previous write at 0x00c0000a6420 by goroutine 10:
+  runtime.mapassign_faststr()
+      /usr/local/go/src/runtime/map_faststr.go:223 +0x0
+  ledgertask/ledger.(*Ledger).Transfer()
+      /app/ledger/ledger.go:84 +0x3db
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants.func1()
+      /app/ledger/ledger_concurrency_test.go:48 +0x2aa
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants.gowrap1()
+      /app/ledger/ledger_concurrency_test.go:50 +0x41
+
+Goroutine 9 (running) created at:
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants()
+      /app/ledger/ledger_concurrency_test.go:41 +0x59d
+  testing.tRunner()
+      /usr/local/go/src/testing/testing.go:1690 +0x226
+  testing.(*T).Run.gowrap1()
+      /usr/local/go/src/testing/testing.go:1743 +0x44
+
+Goroutine 10 (running) created at:
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants()
+      /app/ledger/ledger_concurrency_test.go:41 +0x59d
+  testing.tRunner()
+      /usr/local/go/src/testing/testing.go:1690 +0x226
+  testing.(*T).Run.gowrap1()
+      /usr/local/go/src/testing/testing.go:1743 +0x44
+==================
+==================
+WARNING: DATA RACE
+Write at 0x00c0000a87f0 by goroutine 9:
+  ledgertask/ledger.(*Ledger).Transfer()
+      /app/ledger/ledger.go:83 +0x348
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants.func1()
+      /app/ledger/ledger_concurrency_test.go:48 +0x2aa
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants.gowrap1()
+      /app/ledger/ledger_concurrency_test.go:50 +0x41
+
+Previous write at 0x00c0000a87f0 by goroutine 10:
+  ledgertask/ledger.(*Ledger).Transfer()
+      /app/ledger/ledger.go:84 +0x3ea
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants.func1()
+      /app/ledger/ledger_concurrency_test.go:48 +0x2aa
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants.gowrap1()
+      /app/ledger/ledger_concurrency_test.go:50 +0x41
+
+Goroutine 9 (running) created at:
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants()
+      /app/ledger/ledger_concurrency_test.go:41 +0x59d
+  testing.tRunner()
+      /usr/local/go/src/testing/testing.go:1690 +0x226
+  testing.(*T).Run.gowrap1()
+      /usr/local/go/src/testing/testing.go:1743 +0x44
+
+Goroutine 10 (running) created at:
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants()
+      /app/ledger/ledger_concurrency_test.go:41 +0x59d
+  testing.tRunner()
+      /usr/local/go/src/testing/testing.go:1690 +0x226
+  testing.(*T).Run.gowrap1()
+      /usr/local/go/src/testing/testing.go:1743 +0x44
+==================
+==================
+WARNING: DATA RACE
+Read at 0x00c0000a6420 by goroutine 15:
+  runtime.mapaccess2_faststr()
+      /usr/local/go/src/runtime/map_faststr.go:117 +0x0
+  ledgertask/ledger.(*Ledger).Transfer()
+      /app/ledger/ledger.go:71 +0x224
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants.func1()
+      /app/ledger/ledger_concurrency_test.go:48 +0x2aa
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants.gowrap1()
+      /app/ledger/ledger_concurrency_test.go:50 +0x41
+
+Previous write at 0x00c0000a6420 by goroutine 9:
+  runtime.mapassign_faststr()
+      /usr/local/go/src/runtime/map_faststr.go:223 +0x0
+  ledgertask/ledger.(*Ledger).Transfer()
+      /app/ledger/ledger.go:84 +0x3db
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants.func1()
+      /app/ledger/ledger_concurrency_test.go:48 +0x2aa
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants.gowrap1()
+      /app/ledger/ledger_concurrency_test.go:50 +0x41
+
+Goroutine 15 (running) created at:
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants()
+      /app/ledger/ledger_concurrency_test.go:41 +0x59d
+  testing.tRunner()
+      /usr/local/go/src/testing/testing.go:1690 +0x226
+  testing.(*T).Run.gowrap1()
+      /usr/local/go/src/testing/testing.go:1743 +0x44
+
+Goroutine 9 (running) created at:
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants()
+      /app/ledger/ledger_concurrency_test.go:41 +0x59d
+  testing.tRunner()
+      /usr/local/go/src/testing/testing.go:1690 +0x226
+  testing.(*T).Run.gowrap1()
+      /usr/local/go/src/testing/testing.go:1743 +0x44
+==================
+==================
+WARNING: DATA RACE
+Read at 0x00c0000a87f0 by goroutine 15:
+  ledgertask/ledger.(*Ledger).Transfer()
+      /app/ledger/ledger.go:71 +0x235
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants.func1()
+      /app/ledger/ledger_concurrency_test.go:48 +0x2aa
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants.gowrap1()
+      /app/ledger/ledger_concurrency_test.go:50 +0x41
+
+Previous write at 0x00c0000a87f0 by goroutine 9:
+  ledgertask/ledger.(*Ledger).Transfer()
+      /app/ledger/ledger.go:83 +0x348
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants.func1()
+      /app/ledger/ledger_concurrency_test.go:48 +0x2aa
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants.gowrap1()
+      /app/ledger/ledger_concurrency_test.go:50 +0x41
+
+Goroutine 15 (running) created at:
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants()
+      /app/ledger/ledger_concurrency_test.go:41 +0x59d
+  testing.tRunner()
+      /usr/local/go/src/testing/testing.go:1690 +0x226
+  testing.(*T).Run.gowrap1()
+      /usr/local/go/src/testing/testing.go:1743 +0x44
+
+Goroutine 9 (running) created at:
+  ledgertask/ledger.TestConcurrentTransfersPreserveInvariants()
+      /app/ledger/ledger_concurrency_test.go:41 +0x59d
+  testing.tRunner()
+      /usr/local/go/src/testing/testing.go:1690 +0x226
+  testing.(*T).Run.gowrap1()
+      /usr/local/go/src/testing/testing.go:1743 +0x44
+==================
+fatal error: concurrent map writes
+
+goroutine 24 [running]:
+ledgertask/ledger.(*Ledger).Transfer(...)
+	/app/ledger/ledger.go:84
+ledgertask/ledger.TestConcurrentTransfersPreserveInvariants.func1(0x4)
+	/app/ledger/ledger_concurrency_test.go:48 +0x3dc
+created by ledgertask/ledger.TestConcurrentTransfersPreserveInvariants in goroutine 19
+	/app/ledger/ledger_concurrency_test.go:41 +0x59e
+
+goroutine 1 [chan receive]:
+testing.(*T).Run(0xc0000c8340, {0x6171da, 0x29}, 0x61ad38)
+	/usr/local/go/src/testing/testing.go:1751 +0x851
+testing.runTests.func1(0xc0000c8340)
+	/usr/local/go/src/testing/testing.go:2168 +0x86
+testing.tRunner(0xc0000c8340, 0xc0000d7ae0)
+	/usr/local/go/src/testing/testing.go:1690 +0x227
+testing.runTests(0xc0000b0018, {0x755ec0, 0x4, 0x4}, {0x7d21cf4cb5b8?, 0x40?, 0x75afe0?})
+	/usr/local/go/src/testing/testing.go:2166 +0x8bf
+testing.(*M).Run(0xc0000a2140)
+	/usr/local/go/src/testing/testing.go:2034 +0xf18
+main.main()
+	_testmain.go:51 +0x165
+
+goroutine 19 [runnable]:
+sync.(*WaitGroup).Add(0xc00009c1e0, 0x1)
+	/usr/local/go/src/sync/waitgroup.go:45 +0x1c8
+ledgertask/ledger.TestConcurrentTransfersPreserveInvariants(0xc0000c84e0)
+	/app/ledger/ledger_concurrency_test.go:40 +0x5d0
+testing.tRunner(0xc0000c84e0, 0x61ad38)
+	/usr/local/go/src/testing/testing.go:1690 +0x227
+created by testing.(*T).Run in goroutine 1
+	/usr/local/go/src/testing/testing.go:1743 +0x826
+
+goroutine 25 [runnable]:
+ledgertask/ledger.TestConcurrentTransfersPreserveInvariants.gowrap1()
+	/app/ledger/ledger_concurrency_test.go:41
+runtime.goexit({})
+	/usr/local/go/src/runtime/asm_amd64.s:1700 +0x1
+created by ledgertask/ledger.TestConcurrentTransfersPreserveInvariants in goroutine 19
+	/app/ledger/ledger_concurrency_test.go:41 +0x59e
+
+goroutine 26 [runnable]:
+ledgertask/ledger.TestConcurrentTransfersPreserveInvariants.gowrap1()
+	/app/ledger/ledger_concurrency_test.go:41
+runtime.goexit({})
+	/usr/local/go/src/runtime/asm_amd64.s:1700 +0x1
+created by ledgertask/ledger.TestConcurrentTransfersPreserveInvariants in goroutine 19
+	/app/ledger/ledger_concurrency_test.go:41 +0x59e
+
+goroutine 27 [runnable]:
+ledgertask/ledger.(*Ledger).Transfer(...)
+	/app/ledger/ledger.go:84
+ledgertask/ledger.TestConcurrentTransfersPreserveInvariants.func1(0x7)
+	/app/ledger/ledger_concurrency_test.go:48 +0x38e
+created by ledgertask/ledger.TestConcurrentTransfersPreserveInvariants in goroutine 19
+	/app/ledger/ledger_concurrency_test.go:41 +0x59e
+
+goroutine 28 [runnable]:
+ledgertask/ledger.TestConcurrentTransfersPreserveInvariants.gowrap1()
+	/app/ledger/ledger_concurrency_test.go:41
+runtime.goexit({})
+	/usr/local/go/src/runtime/asm_amd64.s:1700 +0x1
+created by ledgertask/ledger.TestConcurrentTransfersPreserveInvariants in goroutine 19
+	/app/ledger/ledger_concurrency_test.go:41 +0x59e
+
+goroutine 29 [runnable]:
+ledgertask/ledger.TestConcurrentTransfersPreserveInvariants.gowrap1()
+	/app/ledger/ledger_concurrency_test.go:41
+runtime.goexit({})
+	/usr/local/go/src/runtime/asm_amd64.s:1700 +0x1
+created by ledgertask/ledger.TestConcurrentTransfersPreserveInvariants in goroutine 19
+	/app/ledger/ledger_concurrency_test.go:41 +0x59e
+
+goroutine 30 [runnable]:
+ledgertask/ledger.TestConcurrentTransfersPreserveInvariants.gowrap1()
+	/app/ledger/ledger_concurrency_test.go:41
+runtime.goexit({})
+	/usr/local/go/src/runtime/asm_amd64.s:1700 +0x1
+created by ledgertask/ledger.TestConcurrentTransfersPreserveInvariants in goroutine 19
+	/app/ledger/ledger_concurrency_test.go:41 +0x59e
+
+goroutine 31 [runnable]:
+ledgertask/ledger.TestConcurrentTransfersPreserveInvariants.gowrap1()
+	/app/ledger/ledger_concurrency_test.go:41
+runtime.goexit({})
+	/usr/local/go/src/runtime/asm_amd64.s:1700 +0x1
+created by ledgertask/ledger.TestConcurrentTransfersPreserveInvariants in goroutine 19
+	/app/ledger/ledger_concurrency_test.go:41 +0x59e
+
+goroutine 32 [runnable]:
+ledgertask/ledger.TestConcurrentTransfersPreserveInvariants.gowrap1()
+	/app/ledger/ledger_concurrency_test.go:41
+runtime.goexit({})
+	/usr/local/go/src/runtime/asm_amd64.s:1700 +0x1
+created by ledgertask/ledger.TestConcurrentTransfersPreserveInvariants in goroutine 19
+	/app/ledger/ledger_concurrency_test.go:41 +0x59e
+
+goroutine 33 [runnable]:
+ledgertask/ledger.TestConcurrentTransfersPreserveInvariants.gowrap1()
+	/app/ledger/ledger_concurrency_test.go:41
+runtime.goexit({})
+	/usr/local/go/src/runtime/asm_amd64.s:1700 +0x1
+created by ledgertask/ledger.TestConcurrentTransfersPreserveInvariants in goroutine 19
+	/app/ledger/ledger_concurrency_test.go:41 +0x59e
+FAIL	ledgertask/ledger	0.021s
+FAIL

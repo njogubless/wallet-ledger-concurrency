@@ -1,0 +1,38 @@
+schema_version = "1.4"
+artifacts = ["/app/ledger", "/app/go.mod"]
+
+[task]
+name = "njogubless/wallet-ledger-concurrency"
+version = "1.0.0"
+description = "Fix a wallet ledger's double-entry transfer path so concurrent transfers never double-spend, deadlock, or leave the books unbalanced."
+keywords = ["go", "golang", "concurrency", "race-condition", "ledger", "fintech", "mutex", "deadlock"]
+[[task.authors]]
+name = "Bless Njogu"
+email = "pnjogubless@gmail.com"
+
+[metadata]
+difficulty = "medium"
+category = "programming"
+tags = ["concurrency", "go", "fintech", "correctness"]
+
+[verifier]
+timeout_sec = 180.0
+environment_mode = "separate"
+collect = []
+
+[verifier.env]
+
+[agent]
+timeout_sec = 7200.0
+
+[environment]
+network_mode = "no-network"
+build_timeout_sec = 72000.0
+os = "linux"
+cpus = 2
+memory_mb = 2048
+mcp_servers = []
+
+[environment.env]
+
+[solution.env]
